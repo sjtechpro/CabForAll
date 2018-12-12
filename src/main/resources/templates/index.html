@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+<title>Login and Registration Form with HTML5 and CSS3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Login and Registration Form with HTML5 and CSS3" />
+<meta name="keywords"
+	content="html5, css3, form, switch, animation, :target, pseudo-class" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+
+<script>
+function myFunction() {
+    var x = document.getElementById("password1");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+</head>
+<body>
+	<div class="container">
+
+		<header>
+			<h1>Login and Registration Form</h1>
+
+		</header>
+		<section>
+			<div id="container_demo">
+				<!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+				<a class="hiddenanchor" id="toregister"></a> <a class="hiddenanchor"
+					id="tologin"></a>
+				<div id="wrapper">
+					<div id="login" class="animate form">
+						<form action="loginprocess" autocomplete="on" method="post">
+							<h1>Log in</h1>
+							<p>
+								<label for="Emailid" class="uname" data-icon="u"> Your
+									email or username </label> <input id="username" name="emailid"
+									required="required" type="text"
+									placeholder="myusername or mymail@mail.com" />
+							</p>
+							<p>
+								<label for="password" class="youpasswd" data-icon="p">
+									Your password </label> <input id="password1" name="password"
+									required="required" type="password" placeholder="enter ur pswd" />
+									<input type="checkbox" onclick="myFunction()">show password
+							</p>
+							<p class="keeplogin">
+								<input type="checkbox" name="loginkeeping" id="loginkeeping"
+									value="loginkeeping" /> <label for="loginkeeping">Keep
+									me logged in</label>
+							</p>
+							<p class="login button">
+								<input type="submit" value="Login" />
+							</p>
+							<p class="change_link">
+								Not a member yet ? <a href="#toregister" class="to_register">Join
+									us</a>
+							</p>
+						</form>
+					</div>
+
+				  <div id="register" class="animate form">
+						<form action="signupprocess" autocomplete="on" method="post">
+							<h1>Sign up</h1>
+
+
+							<p>
+								<label for="username" class="uname" data-icon="u">Your
+									username</label> <input id="username" name="username"
+									required="required" type="text"
+									placeholder="mysuperusername690" />
+							</p>
+							<p>
+								<label for="FirstName" class="Fname" data-icon="u">Your
+									firstname</label> <input id="firstname" name="firstname"
+									required="required" type="text"
+									placeholder="mysuperusername690" />
+							</p>
+							<p>
+								<label for="LastName" class="Lname" data-icon="u">Your
+									lastname</label> <input id="lastname" name="lastname"
+									required="required" type="text"
+									placeholder="mysuperusername690" />
+							</p>
+							<p>
+								<label for="emailsignup" class="youmail" data-icon="e">
+									Your email</label> <input id="emailid" name="emailid"
+									required="required" type="email"
+									placeholder="mysupermail@mail.com" />
+							</p>
+							<p>
+								<label for="passwordsignup" class="youpasswd" data-icon="p">Your
+									password </label> <input id="password1" name="password"
+									required="required" type="password" placeholder="eg. X8df!90EO" />
+									<input type="checkbox" onclick="myFunction()">show password
+							</p>
+							<p>
+								<label for="Confirmpassword" class="youconfirmpasswd"
+									data-icon="p">Confirm password </label> <input
+									id="confirmpassword" name="confirmpassword" required="required"
+									type="password" placeholder="eg. X8df!90EO" />
+									 
+							</p>
+							<p>
+								<label for="Birthdate" class="bday" data-icon="u">D.O.B</label>
+								<input id="birthdate" name="birthdate" required="required"
+									type="date" placeholder="mysuperusername690" />
+							</p>
+							  <p>
+								<label for="gender"  >Your
+									gender</label> <select name="gender">
+									<option id="gender" value="male" >male</option>
+									<option id="gender" value="female" >female</option>
+								</select>
+							</p>  
+ 
+							<p class="signin button">
+								<input type="submit" value="Sign up" />
+							</p>
+							<p class="change_link">
+								Already a member ? <a href="#tologin" class="to_login">
+									Go and log in </a>
+							</p> 
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+
+		<tr>
+			<th>emailid</th>
+			<th>username</th>
+			<th>pickup</th>
+			<th>dropoff</th>
+			<th>stopovers</th>
+			<th>startingdate</th>
+			<th>returndate</th>
+			<th>rate</th>
+			<th>seats</th>
+		</tr>
+		<tr th:each="user: ${rides}">
+			<td th:text="${user.emailid}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.pickup}"></td>
+			<td th:text="${user.dropoff}"></td>
+			<td th:text="${user.stopovers}"></td>
+			<td th:text="${user.startingdate}"></td>
+			<td th:text="${user.returndate}"></td>
+			<td th:text="${user.rate}"></td>
+			<td th:text="${user.seats}"></td>
+		</tr>
+	</table>
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>List Of Rides</h2>
+<form action="bookingstatus" method="post">
+  <table class="w3-table-all w3-hoverable">
+    <thead>
+      <tr>
+			<th>emailid</th>
+			<th>username</th>
+			<th>pickup</th>
+			<th>dropoff</th>
+			<th>stopovers</th>
+			<th>startingdate</th>
+			<th>returndate</th>
+			<th>rate</th>
+			<th>seats</th>
+			<th>Book the seat</th>
+		</tr>
+    </thead>
+    <tr th:each="user: ${rides}">
+			<td th:text="${user.emailid}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.pickup}"></td>
+			<td th:text="${user.dropoff}"></td>
+			<td th:text="${user.stopovers}"></td>
+			<td th:text="${user.startingdate}"></td>
+			<td th:text="${user.returndate}"></td>
+			<td th:text="${user.rate}"></td>
+			<td th:text="${user.seats}"></td>
+			<td><input type="submit" value="Book" name="book"></td>
+		</tr>
+    
+  </table>
+</div>
+</form>
+
+</body>
+</html>
+
